@@ -1,0 +1,25 @@
+name: mint_pids
+
+on:
+  workflow_dispatch
+
+env:
+    HANDLE_USERNAME: ${{ secrets.HANDLE_USERNAME }}
+    HANDLE_PASSWORD: ${{ secrets.HANDLE_PASSWORD }}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v3
+        - uses: actions/setup-python@v4
+          with:
+            python-version: '3.11'
+            cache: 'pip' # caching pip dependencies
+        - run: pip install -r requirements.txt
+        - name: mint
+          run: python create_pids.py
+        - name: Commit data
+          uses: stefanzweifel/git-auto-commit-action@v4
+          with:
+            commit_message: new handles minted
