@@ -14,3 +14,11 @@ arche_id,handle_id
 https://id.acdh.oeaw.ac.at/foo/bar,
 https://id.acdh.oeaw.ac.at/bar/foo,
 ```
+
+`create_ids.csv` after successfull workflow run
+
+```csv
+arche_id,handle_id
+https://id.acdh.oeaw.ac.at/foo/bar,https://hdl.handle.net/21.11115/0000-000F-FF5C-C
+https://id.acdh.oeaw.ac.at/bar/foo,https://hdl.handle.net/21.11115/0000-000F-FF5D-B
+```
