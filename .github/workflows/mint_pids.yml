@@ -8,7 +8,7 @@ env:
     HANDLE_PASSWORD: ${{ secrets.HANDLE_PASSWORD }}
 
 jobs:
-  publish:
+  mint:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v3
