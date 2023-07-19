@@ -1,6 +1,6 @@
 @prefix ns1: <https://vocabs.acdh.oeaw.ac.at/schema#> .
 
-<https://id.acdh.oeaw.ac.at/bar/foo> ns1:hasPid "https://hdl.handle.net/21.11115/0000-000F-FF61-5" .
+<https://id.acdh.oeaw.ac.at/hansi/bar> ns1:hasPid "https://hdl.handle.net/21.11115/0000-000F-FF60-6" .
 
-<https://id.acdh.oeaw.ac.at/foo/bar> ns1:hasPid "https://hdl.handle.net/21.11115/0000-000F-FF60-6" .
+<https://id.acdh.oeaw.ac.at/hansi/foo> ns1:hasPid "https://hdl.handle.net/21.11115/0000-000F-FF61-5" .
 
