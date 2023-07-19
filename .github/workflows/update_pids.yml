@@ -1,4 +1,4 @@
-name: mint_pids
+name: update_pids
 
 on:
   workflow_dispatch
@@ -8,7 +8,7 @@ env:
     HANDLE_PASSWORD: ${{ secrets.HANDLE_PASSWORD }}
 
 jobs:
-  mint:
+  update_pids:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v3
