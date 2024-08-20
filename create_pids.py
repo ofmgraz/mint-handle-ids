@@ -9,18 +9,18 @@ HANDLE_PASSWORD = os.environ.get("HANDLE_PASSWORD")
 CSV_FILE = "create_ids.csv"
 
 cl = HandleClient(HANDLE_USERNAME, HANDLE_PASSWORD)
-reader = csv.DictReader(open("create_ids.csv"))
-
 data = []
-
-for row in reader:
-    data.append([row["arche_id"], cl.register_handle(row["arche_id"], full_url=True)])
+with open(CSV_FILE) as f:
+    reader = csv.DictReader(f,delimiter=',')
+    for row in reader:
+        print(row["arche_id"])
+        data.append([row["arche_id"], cl.register_handle(row["arche_id"], full_url=True)])
 
 with open(CSV_FILE, "w") as f:
     writer = csv.writer(f)
     writer.writerow(["arche_id", "handle_id"])
     for row in data:
-        writer.writerow(row)
+    writer.writerow(row)
 
 print("creating ttl")
 g = Graph()
