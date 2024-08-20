@@ -20,7 +20,7 @@ with open(CSV_FILE, "w") as f:
     writer = csv.writer(f)
     writer.writerow(["arche_id", "handle_id"])
     for row in data:
-    writer.writerow(row)
+        writer.writerow(row)
 
 print("creating ttl")
 g = Graph()
